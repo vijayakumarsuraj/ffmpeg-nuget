@@ -5,7 +5,7 @@
         <version>4.1.1.1</version>
         <title>FFmpeg Command Line Tools</title>
         <authors>Suraj Vijayakumar</authors>
-        <licenseUrl>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</licenseUrl>
+        <license type="expression">LGPL-3.0-or-later</license>
         <projectUrl>https://github.com/vijayakumarsuraj/ffmpeg-nuget</projectUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <description>Packages the ffmpeg.exe executable. Installing this package adds a build step to your project that will copy this executable to the bin directory under a "ffmpeg" folder.
