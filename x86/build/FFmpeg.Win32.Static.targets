@@ -1,0 +1,13 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Copy the files to bin before the build -->
+  <Target Name="CopyFFmpegToBin" BeforeTargets="BeforeBuild">
+    <ItemGroup>
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\ffmpeg.exe" />
+    </ItemGroup>
+    <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="$(TargetDir)ffmpeg" SkipUnchangedFiles="true" />
+  </Target>
+  <!-- Delete the files from bin after clean -->
+  <Target Name="DeleteFFmpegFromBin" BeforeTargets="AfterClean">
+    <RemoveDir Directories="$(TargetDir)ffmpeg" />
+  </Target>
+</Project>

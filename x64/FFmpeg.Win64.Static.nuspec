@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>FFmpeg.Win64.Static</id>
+        <version>4.1.1.1</version>
+        <title>FFmpeg Command Line Tools</title>
+        <authors>Suraj Vijayakumar</authors>
+        <licenseUrl>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</licenseUrl>
+        <projectUrl>https://github.com/vijayakumarsuraj/ffmpeg-nuget</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>Packages the ffmpeg.exe executable. Installing this package adds a build step to your project that will copy this executable to the bin directory under a "ffmpeg" folder.
+
+Refer to the FFmpeg documentation for details on how to use this executable (https://ffmpeg.org/ffmpeg.html).</description>
+        <summary>Packages up FFmpeg's command line tools in an easy to use nupkg (Windows 64-bit static linked)</summary>
+        <releaseNotes>Updated to use v4.1.1 of ffmpeg.</releaseNotes>
+        <tags>ffmpeg</tags>
+    </metadata>
+</package>
