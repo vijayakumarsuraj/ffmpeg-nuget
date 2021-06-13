@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>FFmpeg.Win64.Static</id>
-        <version>4.1.1.1</version>
+        <id>FFmpeg.Static</id>
+        <version>4.4.0.7</version>
         <title>FFmpeg Command Line Tools</title>
-        <authors>Suraj Vijayakumar</authors>
+        <authors>Suraj Vijayakumar，heMinzhang</authors>
         <license type="expression">LGPL-3.0-or-later</license>
         <projectUrl>https://github.com/vijayakumarsuraj/ffmpeg-nuget</projectUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -12,7 +12,7 @@
 
 Refer to the FFmpeg documentation for details on how to use this executable (https://ffmpeg.org/ffmpeg.html).</description>
         <summary>Packages up FFmpeg's command line tools in an easy to use nupkg (Windows 64-bit static linked)</summary>
-        <releaseNotes>Updated to use v4.1.1 of ffmpeg.</releaseNotes>
+        <releaseNotes>fix not copy bug.</releaseNotes>
         <tags>ffmpeg</tags>
     </metadata>
 </package>

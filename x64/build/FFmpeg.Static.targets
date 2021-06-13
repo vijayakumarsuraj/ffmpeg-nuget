@@ -1,0 +1,23 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Copy the files to bin before the build -->
+  <Target Name="CopyFFmpegToBin" BeforeTargets="BeforeBuild">
+    <ItemGroup>
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\avcodec-58.dll" />
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\avdevice-58.dll" />
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\avfilter-7.dll" />
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\avformat-58.dll" />
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\avutil-56.dll" />
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\ffmpeg.exe" />
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\ffplay.exe" />
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\ffprobe.exe" />
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\postproc-55.dll" />
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\swresample-3.dll" />
+      <FilesToCopy Include="$(MSBuildThisFileDirectory)..\ffmpeg\swscale-5.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="$(TargetDir)ffmpeg" SkipUnchangedFiles="true" />
+  </Target>
+  <!-- Delete the files from bin after clean -->
+  <Target Name="DeleteFFmpegFromBin" BeforeTargets="AfterClean">
+    <RemoveDir Directories="$(TargetDir)ffmpeg" />
+  </Target>
+</Project>
